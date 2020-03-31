@@ -1,0 +1,39 @@
+{
+  "name": "@adso/ts-skeleton",
+  "version": "1.0.0",
+  "description": "Skeleton for typescript util libraries",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "typings": "./dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn tsc",
+    "build:watch": "yarn tsc -w",
+    "test": "jest",
+    "tdd": "jest --watchAll",
+    "tslint": "tslint 'src/**/*.ts'",
+    "tsc": "tsc --module commonjs",
+    "release": "standard-version --release-as patch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:adam-sokolowski/ts-skeleton.git"
+  },
+  "keywords": [
+    "ts",
+    "es6",
+    "commonjs",
+    "jest",
+    "utils",
+    "skeleton"
+  ],
+  "author": "Adam Sokołowski <adam.sokolowski@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "standard-version": "^7.1.0",
+    "tslib": "^1.11.1",
+    "typescript": "^3.8.3"
+  }
+}
