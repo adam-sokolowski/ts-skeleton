@@ -1,6 +1,6 @@
 {
   "name": "@adso/ts-skeleton",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Skeleton for typescript util libraries",
   "repository": {
     "type": "git",
@@ -31,14 +31,14 @@
     "reset:githooks": "rm -rf ./.git/hooks/* && rm -rf node_modules/husky && yarn install --check-files"
   },
   "husky": {
-      "hooks": {
-        "pre-commit": [
-          "yarn lint"
-        ],
-        "pre-push": [
-          "yarn test"
-        ]
-      }
+    "hooks": {
+      "pre-commit": [
+        "yarn lint"
+      ],
+      "pre-push": [
+        "yarn test"
+      ]
+    }
   },
   "author": "Adam Sokołowski <adam.sokolowski@gmail.com>",
   "license": "MIT",
