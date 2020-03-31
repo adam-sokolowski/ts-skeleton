@@ -2,21 +2,6 @@
   "name": "@adso/ts-skeleton",
   "version": "1.0.0",
   "description": "Skeleton for typescript util libraries",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "typings": "./dist/types/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "build": "yarn tsc",
-    "build:watch": "yarn tsc -w",
-    "test": "jest",
-    "tdd": "jest --watchAll",
-    "tslint": "tslint 'src/**/*.ts'",
-    "tsc": "tsc --module commonjs",
-    "release": "standard-version --release-as patch"
-  },
   "repository": {
     "type": "git",
     "url": "git@github.com:adam-sokolowski/ts-skeleton.git"
@@ -29,14 +14,44 @@
     "utils",
     "skeleton"
   ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "typings": "./dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc --module commonjs",
+    "build:watch": "yarn build -w",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "lint": "tsc --noEmit && eslint '*/**/*.ts' --quiet --fix",
+    "release:patch": "standard-version --release-as patch",
+    "release:minor": "standard-version --release-as minor",
+    "reset:githooks": "rm -rf ./.git/hooks/* && rm -rf node_modules/husky && yarn install --check-files"
+  },
+  "husky": {
+      "hooks": {
+        "pre-commit": [
+          "yarn lint"
+        ],
+        "pre-push": [
+          "yarn test"
+        ]
+      }
+  },
   "author": "Adam Sokołowski <adam.sokolowski@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@types/jest": "^25.1.4",
-    "jest": "^25.2.4",
-    "standard-version": "^7.1.0",
-    "ts-jest": "^25.3.0",
-    "tslib": "^1.11.1",
-    "typescript": "^3.8.3"
+    "@types/jest": "~25.1.0",
+    "@typescript-eslint/eslint-plugin": "~2.26.0",
+    "@typescript-eslint/parser": "~2.26.0",
+    "eslint": "~6.8.0",
+    "husky": "^4.2.3",
+    "jest": "~25.2.0",
+    "standard-version": "~7.1.0",
+    "ts-jest": "~25.3.0",
+    "tslib": "~1.11.0",
+    "typescript": "~3.8.0"
   }
 }

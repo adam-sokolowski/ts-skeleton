@@ -3,7 +3,7 @@ module.exports = {
   transform: { '^.+\\.tsx?$': 'ts-jest' },
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
   testPathIgnorePatterns: ['/coverage/', '/dist/', '/node_modules/'],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  moduleFileExtensions: 'ts',
   collectCoverage: true,
   coveragePathIgnorePatterns: ['/node_modules/'],
   coverageThreshold: {
