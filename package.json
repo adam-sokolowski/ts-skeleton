@@ -26,6 +26,7 @@
     "source:test": "jest",
     "source:test:watch": "jest --watchAll",
     "source:lint": "tsc --noEmit && eslint '*/**/*.ts' --quiet --fix",
+    "source:coverage-badges": "coverage-badges --save=badges",
     "package:release:patch": "standard-version --release-as patch",
     "package:release:minor": "standard-version --release-as minor",
     "package:githooks:reset": "rm -rf ./.git/hooks/* && rm -rf node_modules/husky && yarn install --check-files"
@@ -53,5 +54,8 @@
     "ts-jest": "~26.1.0",
     "tslib": "~2.0.0",
     "typescript": "~3.9.0"
+  },
+  "dependencies": {
+    "@adso-ts/badges": "^1.1.3"
   }
 }
