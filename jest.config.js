@@ -5,6 +5,7 @@ module.exports = {
   testPathIgnorePatterns: ['/coverage/', '/dist/', '/node_modules/'],
   moduleFileExtensions: 'ts',
   collectCoverage: true,
+  coverageReporters: ['json-summary', 'text-summary'],
   coveragePathIgnorePatterns: ['/node_modules/'],
   coverageThreshold: {
     global: {
