@@ -1,6 +1,6 @@
 {
   "name": "@adso/ts-skeleton",
-  "version": "1.0.3",
+  "version": "0.0.0",
   "description": "Skeleton for typescript util libraries",
   "repository": {
     "type": "git",
