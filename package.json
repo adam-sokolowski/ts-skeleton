@@ -23,9 +23,11 @@
   "scripts": {
     "build": "tsc --module commonjs",
     "build:watch": "yarn build -w",
+
     "source:test": "jest",
     "source:test:watch": "jest --watchAll",
     "source:lint": "tsc --noEmit && eslint '*/**/*.ts' --quiet --fix",
+
     "source:coverage-badges": "coverage-badges --save=badges",
     "package:release:patch": "standard-version --release-as patch",
     "package:release:minor": "standard-version --release-as minor",
@@ -44,14 +46,14 @@
   "author": "Adam Sokołowski <adam.sokolowski@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@types/jest": "~26.0.0",
-    "@typescript-eslint/eslint-plugin": "~3.8.0",
-    "@typescript-eslint/parser": "~3.8.0",
-    "eslint": "~7.6.0",
-    "husky": "~4.2.0",
-    "jest": "~26.2.0",
-    "standard-version": "~8.0.0",
-    "ts-jest": "~26.1.0",
+    "@types/jest": "~26.0.10",
+    "@typescript-eslint/eslint-plugin": "~3.9.0",
+    "@typescript-eslint/parser": "~3.9.0",
+    "eslint": "~7.7.0",
+    "husky": "~4.2.5",
+    "jest": "~26.4.0",
+    "standard-version": "~9.0.0",
+    "ts-jest": "~26.2.0",
     "tslib": "~2.0.0",
     "typescript": "~3.9.0"
   },
